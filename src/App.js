@@ -9,7 +9,7 @@ function App() {
   const [selectedPokemon, setSelectedPokemon] = useState(null);
 
   const filteredPokemonList = pokemonList.filter((pokemon) =>
-    pokemon.name.includes(searchTerm)
+    pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const showPokemon = async (url) => {
